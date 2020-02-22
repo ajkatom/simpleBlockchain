@@ -20,5 +20,16 @@ export default class BlockChain {
     this.blockChain.push(newBlock);
   }
 
-  
+  validityTest() {
+    for (let i = 1; i < this.blockChain.length; i++) {
+      let currentBlock = this.blockChain[i];
+
+      let previousBlock = this.blockChain[i - 1];
+
+      if (currentBlock.hash != currentBlock.generateHash()) return false;
+
+      if (currentBlock.previousHash != previousBlock.hash) return false;
+    }
+    return true;
+  }
 }

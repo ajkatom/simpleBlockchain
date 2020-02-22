@@ -1,5 +1,21 @@
 import BlockChain from './blockChain';
+import Block from './block';
 
 let chain = new BlockChain();
 
-console.log(chain.firstBlock());
+chain.addBlock(
+  new Block({
+    vendor: 'x-corp',
+    customer: 'x-retailer',
+    quantity: '200',
+  })
+);
+chain.addBlock(
+  new Block({
+    vendor: 'y-corp',
+    customer: 'y-retailer',
+    quantity: '600',
+  })
+);
+
+console.log(JSON.stringify(chain, null, 4), chain.validityTest());
