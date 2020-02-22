@@ -1,0 +1,31 @@
+{
+    "name": "y",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "babel-watch -L index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ajkatom/simpleBlockchain.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ajkatom/simpleBlockchain/issues"
+    },
+    "homepage": "https://github.com/ajkatom/simpleBlockchain#readme",
+    "dependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.8.4",
+        "@babel/preset-env": "^7.8.4",
+        "crypto-js": "^4.0.0",
+        "uuid": "^3.4.0"
+    },
+    "devDependencies": {
+        "babel-plugin-module-resolver": "^4.0.0",
+        "babel-watch": "^7.0.0"
+    }
+}
