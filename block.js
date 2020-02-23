@@ -9,6 +9,8 @@ export default class Block {
     this.previousHash = previousHash;
     this.hash = this.generateHash();
     this.nonce = 0;
+    this.next = null;
+    this.previous = null;
   }
 
   generateHash() {
@@ -17,15 +19,10 @@ export default class Block {
     ).toString();
   }
 
-  proofOfWork(difficulty){
-    while (
-        this.hash.substring(0,difficulty) != Array(difficulty+1).join('0')
-    ){
+  proofOfWork(difficulty) {
+    while (this.hash.substring(0, difficulty) != Array(difficulty + 1).join('0')) {
       this.nonce++;
       this.hash = this.generateHash();
     }
   }
-
 }
-
-

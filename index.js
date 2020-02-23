@@ -18,4 +18,6 @@ chain.addBlock(
   })
 );
 
-console.log(JSON.stringify(chain, null, 4), chain.validityTest());
+//console.log(JSON.stringify(chain, null, 4), chain.validityTest());
+
+console.log(chain, chain.validityTest());
