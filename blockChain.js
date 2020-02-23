@@ -30,4 +30,19 @@ export default class BlockChain {
     }
     return true;
   }
+  showChainInArray() {
+    let currentBlock = this.head;
+    let chainArray = [];
+    while (currentBlock) {
+      chainArray.push({
+        index: currentBlock.index,
+        timestamp: currentBlock.timestamp,
+        data: currentBlock.data,
+        previousHash: currentBlock.previousHash,
+        hash: currentBlock.hash,
+      });
+      currentBlock = currentBlock.next;
+    }
+    return chainArray;
+  }
 }

@@ -18,5 +18,4 @@ chain.addBlock(
   })
 );
 
-
-console.log(chain, chain.validityTest());
+console.log(chain.showChainInArray(), chain.validityTest());
