@@ -30,7 +30,7 @@ export default class BlockChain {
     }
     return true;
   }
-  showChainInArray() {
+  showChainAsArray() {
     let currentBlock = this.head;
     let chainArray = [];
     while (currentBlock) {
